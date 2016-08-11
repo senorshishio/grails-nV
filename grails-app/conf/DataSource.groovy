@@ -1,15 +1,15 @@
-/*dataSource {
+dataSource {
     pooled = true
     driverClassName = "com.mysql.jdbc.Driver"
     dialect = "org.hibernate.dialect.MySQL5InnoDBDialect"
     username = "root"
-}*/
-dataSource {
+}
+/* dataSource {
     pooled = false
     driverClassName = "org.h2.Driver"
     username = "sa"
     password = ""
-}
+} */
 
 hibernate {
     cache.use_second_level_cache = true
@@ -24,20 +24,20 @@ hibernate {
 environments {
     development {
         dataSource {
-            //url = "jdbc:mysql://localhost/grails_nV-dev?useUnicode=yes&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull"
-            url = "jdbc:h2:devDb"
+            url = "jdbc:mysql://localhost/grails_nV-dev?useUnicode=yes&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull"
+            //url = "jdbc:h2:devDb"
         }
     }
     test {
         dataSource {
-            //url = "jdbc:mysql://localhost/grails_nV-test?useUnicode=yes&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull"
-            url = "jdbc:h2:devDb"
+            url = "jdbc:mysql://localhost/grails_nV-test?useUnicode=yes&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull"
+            //url = "jdbc:h2:devDb"
         }
     }
     production {
         dataSource {
-            //url = "jdbc:mysql://localhost/grails_nV-prod?useUnicode=yes&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull"
-            url = "jdbc:h2:devDb"
+            url = "jdbc:mysql://localhost/grails_nV-prod?useUnicode=yes&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull"
+            //url = "jdbc:h2:devDb"
             properties {
                // See http://grails.org/doc/latest/guide/conf.html#dataSource for documentation
                jmxEnabled = true
